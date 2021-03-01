@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <v-app-bar app :color="bg">
+    <v-app-bar app :color="bg" elevate-on-scroll>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -23,38 +23,39 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn href="#" text color="white">Features</v-btn>
+        <v-btn href="#" text color="white">About us</v-btn>
+        <v-btn href="#" text color="white">Partners</v-btn>
+        <v-btn href="#" text color="white">Contact</v-btn>
+      </v-toolbar-items>
+
     </v-app-bar>
 
     <v-main>
       <Section1 />
       <Section1 />
       <Section1 />
-      <Section1 />
+      <AppFooter />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import Section1 from "./components/Section1";
+import AppFooter from "./components/AppFooter";
 
 export default {
   name: "App",
 
   components: {
-    Section1
+    Section1,
+    AppFooter
   },
 
   data: () => ({
 
-      bg: 'white'
+      bg: '#23273B'
 
   }),
   mounted() {
@@ -68,7 +69,7 @@ export default {
         document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100
       ) {
-        this.bg = 'white';
+        this.bg = '#23273B';
       } else {
         this.bg = 'transparent';
       }
