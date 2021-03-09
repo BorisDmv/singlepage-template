@@ -11,7 +11,7 @@ export default new Vuetify({
         light: {
           primary: colors.purple.base, 
           grey: colors.grey.lighten2, 
-          accent: colors.indigo.base, 
+          dark: colors.grey.darken4, 
         },
       },
     },

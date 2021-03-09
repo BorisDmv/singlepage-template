@@ -22,7 +22,7 @@
         :color='footerBG'
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>Name</strong>
       </v-col>
     </v-row>
   </v-footer>
