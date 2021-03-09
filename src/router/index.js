@@ -14,6 +14,14 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
+  scrollBehavior (to) {    
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        behavior: 'smooth'
+      }
+    }
+  },
   base: process.env.BASE_URL,
   routes
 });
