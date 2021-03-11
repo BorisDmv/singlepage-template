@@ -28,7 +28,6 @@
           dense
         >
           <v-list-item-group
-            v-model="group"
             active-class="purple--text"
           >
             <v-list-item>

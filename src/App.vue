@@ -7,8 +7,8 @@
 
     <v-main>
       <Section1 id="features"></Section1>
-      <Section1 id="partners"></Section1>
-      <Section1 id="contact"></Section1>
+      <Section2 id="partners"></Section2>
+      <Section3 id="contact"></Section3>
       <AppFooter />
     </v-main>
   </v-app>
@@ -17,6 +17,8 @@
 <script>
 import Navigation from "./components/Navigation";
 import Section1 from "./components/Section1";
+import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
 import AppFooter from "./components/AppFooter";
 
 export default {
@@ -25,6 +27,8 @@ export default {
   components: {
     Navigation,
     Section1,
+    Section2,
+    Section3,
     AppFooter
   },
 
