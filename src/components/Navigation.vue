@@ -17,11 +17,13 @@
         </v-toolbar-items>
       </v-app-bar>
 
-      <v-toolbar-title class="float-left white--text hidden-md-and-up ml-3 mt-3">NAME</v-toolbar-title>
-
+      <v-app-bar fixed :color="bg" elevate-on-scroll class="pb-16 hidden-md-and-up">
+      <v-toolbar-title fixed class="float-left white--text hidden-md-and-up ml-3 mt-3">NAME</v-toolbar-title>
+      <v-spacer></v-spacer>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="float-right white hidden-md-and-up mr-3 mt-3"></v-app-bar-nav-icon>
+      </v-app-bar>
 
-      <v-navigation-drawer app v-model="drawer" absolute  temporary class="dark">
+      <v-navigation-drawer fixed v-model="drawer" class="dark">
 
         <v-list
           nav
