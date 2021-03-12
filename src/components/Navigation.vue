@@ -1,6 +1,8 @@
 <template>
    
    <div>
+
+   <!--DESKTOP-->
     <v-app-bar app :color="bg" elevate-on-scroll class="hidden-sm-and-down">
       <div class="d-flex align-center">
 
@@ -17,6 +19,8 @@
         </v-toolbar-items>
       </v-app-bar>
 
+
+      <!--MOBILE-->
       <v-app-bar fixed :color="bg" elevate-on-scroll class="pb-16 hidden-md-and-up">
       <v-toolbar-title fixed class="float-left white--text hidden-md-and-up ml-3 mt-3">NAME</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -32,20 +36,20 @@
           <v-list-item-group
             active-class="purple--text"
           >
-            <v-list-item>
-              <v-list-item-title>Foo</v-list-item-title>
+            <v-list-item dark :to="{path: '/#aboutus'}">
+              <v-list-item-title >ABOUT US</v-list-item-title>
             </v-list-item>
 
-            <v-list-item>
-              <v-list-item-title>Bar</v-list-item-title>
+            <v-list-item dark  :to="{path: '/#features'}">
+              <v-list-item-title>FEATURES</v-list-item-title>
             </v-list-item>
 
-            <v-list-item>
-              <v-list-item-title>Fizz</v-list-item-title>
+            <v-list-item dark  :to="{path: '/#partners'}">
+              <v-list-item-title>PARTNERS</v-list-item-title>
             </v-list-item>
 
-            <v-list-item>
-              <v-list-item-title>Buzz</v-list-item-title>
+            <v-list-item dark  :to="{path: '/#contact'}">
+              <v-list-item-title>CONTACT</v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>

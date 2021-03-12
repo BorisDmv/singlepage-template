@@ -17,7 +17,7 @@
               <v-col
                 v-for="(item, i) in items"
                 :key="i"
-                cols="3"
+                cols="12"
                 md="4"
               >
                 <v-card
