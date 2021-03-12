@@ -10,8 +10,8 @@
         <v-spacer></v-spacer>
 
         <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn :to="{path: '/#aboutus'}" text color="white">About us</v-btn>
           <v-btn :to="{path: '/#features'}" text color="white">Features</v-btn>
-          <v-btn href="#" text color="white">About us</v-btn>
           <v-btn :to="{path: '/#partners'}" text color="white">Partners</v-btn>
           <v-btn :to="{path: '/#contact'}" text color="white">Contact</v-btn>
         </v-toolbar-items>

@@ -5,24 +5,56 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mt-16 mb-3">
-          OUR COMPANY IS <br/> OFFERING YOU THE BEST
+          OUR PARTNERS
         </h1>
 
-        <p class="title font-weight-regular grey--text">
-         Is simply dummy text of the printing and typesetting industry.
-          <br />Lorem Ipsum has been the industry's standard dummy text ever since
-        </p>
+        <v-icon dark class="mt-15 mb-15">arrow_downward</v-icon>
 
-        <v-btn 
-        color="primary"
-        style="width: 300px"
-        >
-          LEARN MORE
-        </v-btn>
+        <v-item-group>
+          <v-container>
+            <v-row>
+
+              <v-col
+                v-for="(item, i) in items"
+                :key="i"
+                cols="3"
+                md="4"
+              >
+                <v-card
+                  :color="item.color"
+                  outlined
+                  class="justify-center"
+                >
+                  <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                      <v-card-title
+                        class="headline primary--text"
+                        v-text="item.title"
+                      ></v-card-title>
+
+
+                    </div>
+
+                    <v-avatar
+                      class="ma-3"
+                      size="125"
+                      tile
+                    >
+                      <v-img :src="item.src"></v-img>
+                    </v-avatar>
+                  </div>
+                </v-card>
+              </v-col>
+
+            </v-row>
+          </v-container>
+        </v-item-group>
+
+        <v-divider dark class="mt-15 mb-15"></v-divider>
+
+
       </v-col>
-
       
-
      
     
     </v-row>
@@ -34,7 +66,38 @@ export default {
   name: "Section3",
 
   data: () => ({
-
+      items: [
+        {
+          color: '#23273B',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Supermodel',
+        },
+        {
+          color: '#23273B',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Supermodel',
+        },
+        {
+          color: '#23273B',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Supermodel',
+        },
+        {
+          color: '#23273B',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Supermodel',
+        },
+        {
+          color: '#23273B',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Supermodel',
+        },
+        {
+          color: '#23273B',
+          src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+          title: 'Supermodel',
+        },
+      ]
   })
 };
 </script>
